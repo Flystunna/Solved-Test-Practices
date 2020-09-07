@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingServer", "RatingServer\RatingServer.csproj", "{D7C205F9-8D61-4796-9D1C-6047004D3BF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RatingServer.Tests", "RatingServer.Tests\RatingServer.Tests.csproj", "{12DD27E3-2BFE-4C21-884D-5205D3FDCFE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7C205F9-8D61-4796-9D1C-6047004D3BF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7C205F9-8D61-4796-9D1C-6047004D3BF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7C205F9-8D61-4796-9D1C-6047004D3BF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7C205F9-8D61-4796-9D1C-6047004D3BF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12DD27E3-2BFE-4C21-884D-5205D3FDCFE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12DD27E3-2BFE-4C21-884D-5205D3FDCFE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12DD27E3-2BFE-4C21-884D-5205D3FDCFE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12DD27E3-2BFE-4C21-884D-5205D3FDCFE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E2BA6284-07C8-4A2E-9817-FF034C1F5892}
+	EndGlobalSection
+EndGlobal
