@@ -204,5 +204,23 @@ namespace RatingServer.Tests.Com.Crossover
                 Assert.AreEqual("HIGH="+rating+"-CACHEDTrue", result);
             }
         }
+
+        private void InitShimDependencies(Boolean externalRatingApproved, Boolean rationgDecoration)
+        {
+            ShimNotificationService.AllInstances.NotifyInt32 = (@this, s) => { };
+            ShimExternalRatingApprovalService.AllInstances.IsApprovedInt32 = (@this, s) => { return externalRatingApproved; };
+            ShimUtils.AllInstances.GetRatingDecoration = (@this) => { return rationgDecoration; };
+            ShimHardClass.StaticConstructor = () =>
+            {
+            };
+            var testClass = new HardClass();
+            var privateObject = new PrivateObject(testClass);
+            privateObject.SetField("notificationService", new NotificationService());
+            privateObject.SetField("externalRatingApprovalService", new ExternalRatingApprovalService());
+            FieldInfo UTILS = typeof(HardClass).GetField("UTILS", BindingFlags.NonPublic | BindingFlags.Static);
+            UTILS.SetValue("UTILS", new Utils());
+            FieldInfo HARD_CACHE = typeof(HardClass).GetField("HARD_CACHE", BindingFlags.NonPublic | BindingFlags.Static);
+            HARD_CACHE.SetValue("HARD_CACHE", 22);
+        }
     }
 }
